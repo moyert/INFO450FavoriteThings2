@@ -2,7 +2,7 @@
 #include <string>
 #include "Beer.hpp"
 using namespace std;
-
+//default constructor
 Beer::Beer()
 {
     name = " ";
@@ -11,6 +11,7 @@ Beer::Beer()
     abv = 0;
     rating = 0;
 }
+// All the getters and setters for our 5 variables
 string Beer::getName()
 {
     return name;
@@ -52,6 +53,7 @@ void Beer::setRating(int r)
 {
     rating = r;
 }
+// All the getters and setters for our 5 variables
 void Beer::getBeer()
 {
     cin.clear();
@@ -73,27 +75,28 @@ void Beer::getBeer()
     cin >> rating;
 
 
-    cout << "\t\t    ==========================================================" << endl;
+    cout << "\t\t    ----------------------------------------------------------" << endl;
     cout << "\t\t    |---- YOUR DATA HAS BEEN STORED INTO THE APPLICATION ----|" << endl;
-    cout << "\t\t    ==========================================================" << endl << endl << endl;
+    cout << "\t\t    ----------------------------------------------------------" << endl;
 }
-
+//This is how we collect the data for anew entry
 ostream& operator<< (ostream&o, const Beer& beer)
 {
-    o << "\t\t    =================================================" << endl;
-    o << "\t\t    |---- YOUR DRONE COLLECTION DATA INCLUDES:  ----|" << endl;
+    o << "\t\t    -------------------------------------------------" << endl;
+    o << "\t\t    |--------------- YOUR FAVORITE BEERS:  ---------|" << endl;
     o << "\t\t    |                   **************              |" << endl;
     o << "\t\t    |                     ********                  |" << endl;
     o << "\t\t    |                       ****                    |" << endl;
     o << "\t\t    |      Brand: " << beer.name <<     "\t\t       |" << endl;
-    o << "\t\t    |      Color: " << beer.brewery <<     "\t\t    |" << endl;
-    o << "\t\t    |      Feature: " << beer.type << "\t\t         |" << endl;
-    o << "\t\t    |      Price: " << beer.abv <<     "\t\t        |" << endl;
+    o << "\t\t    |      Brewery: " << beer.brewery <<     "\t\t    |" << endl;
+    o << "\t\t    |      Type: " << beer.type << "\t\t         |" << endl;
+    o << "\t\t    |      ABV: " << beer.abv <<     "\t\t        |" << endl;
     o << "\t\t    |      Rating: " << beer.rating <<   "\t\t      |" << endl;
     o << "\t\t    |                       ****                    |" << endl;
     o << "\t\t    |                     ********                  |" << endl;
     o << "\t\t    |                   **************              |" << endl;
-    o << "\t\t    =================================================" << endl << endl << endl;
+    o << "\t\t    -------------------------------------------------" << endl;
+
 
     return o;
 }
