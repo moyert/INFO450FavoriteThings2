@@ -16,7 +16,6 @@ bool BeerList::findBeer(Beer beer)
         {
             cout << "Beer " << beerList[i].getName() << " already exist in the application!" << endl;
             cout << "Please enter a different name" << endl;
-            cout << endl;
             return false;
         }
     }
